@@ -1,6 +1,10 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_web-0.2.1+6" />
+      <root url="file://$USER_HOME$/.pub-cache/git/plugins-9e46048ad2e1f085c1e8f6c77391fa52025e681f/packages/camera/camera" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fluttertoast-8.1.2" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>
