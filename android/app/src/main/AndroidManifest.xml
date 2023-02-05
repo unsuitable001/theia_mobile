@@ -2,6 +2,11 @@
     package="io.unsuitable001.theia.theia_mobile">
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
    <application
         android:label="theia_mobile"
         android:name="${applicationName}"

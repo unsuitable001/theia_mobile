@@ -43,6 +43,7 @@ dependencies:
   fluttertoast: ^8.1.2
   tflite:
     path: /Users/unsuitable001/development/grad_project/flutter_tflite
+  text_to_speech: ^0.2.3
 
 dev_dependencies:
   flutter_test:

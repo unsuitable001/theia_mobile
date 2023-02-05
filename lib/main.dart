@@ -5,6 +5,7 @@ import 'dart:math' as math;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:tflite/tflite.dart';
 import 'package:theia_mobile/bndbox.dart';
+import 'package:theia_mobile/decision_engine/decision_engine.dart';
 import 'package:theia_mobile/recognizer.dart';
 
 import 'constants.dart';
@@ -29,9 +30,10 @@ class TheiaApp extends StatefulWidget {
 
 class _TheiaAppState extends State<TheiaApp> {
   late CameraController controller;
-  List<dynamic> _recognitions = [];
-  int _imageHeight = 0;
-  int _imageWidth = 0;
+  final decisionEngine = DecisionEngine();
+  // List<dynamic> _recognitions = [];
+  // int _imageHeight = 0;
+  // int _imageWidth = 0;
 
   @override
   void initState() {
@@ -92,12 +94,13 @@ class _TheiaAppState extends State<TheiaApp> {
   }
 
   setRecognitions(recognitions, imageHeight, imageWidth) {
-    print(recognitions);
-    setState(() {
-      _recognitions = recognitions;
-      _imageHeight = imageHeight;
-      _imageWidth = imageWidth;
-    });
+    decisionEngine.inferenceSink.add(recognitions);
+    // print(recognitions);
+    // setState(() {
+    //   _recognitions = recognitions;
+    //   _imageHeight = imageHeight;
+    //   _imageWidth = imageWidth;
+    // });
   }
 
   @override
@@ -110,18 +113,18 @@ class _TheiaAppState extends State<TheiaApp> {
         children: [
           Recognizer(controller, setRecognitions),
           // CameraPreview(controller),
-          Builder(
-            builder: (context) {
-              Size screen = MediaQuery.of(context).size;
-              return BndBox(
-                  _recognitions,
-                  math.max(_imageHeight, _imageWidth),
-                  math.min(_imageHeight, _imageWidth),
-                  screen.height,
-                  screen.width
-              );
-            }
-          )
+          // Builder(
+          //   builder: (context) {
+          //     Size screen = MediaQuery.of(context).size;
+          //     return BndBox(
+          //         _recognitions,
+          //         math.max(_imageHeight, _imageWidth),
+          //         math.min(_imageHeight, _imageWidth),
+          //         screen.height,
+          //         screen.width
+          //     );
+          //   }
+          // )
         ],
       ),
     );
