@@ -41,6 +41,8 @@ dependencies:
       path: packages/camera/camera
       ref: 9e46048ad2e1f085c1e8f6c77391fa52025e681f
   fluttertoast: ^8.1.2
+  tflite:
+    path: /Users/unsuitable001/development/grad_project/flutter_tflite
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +65,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/ssd_mobilenet.tflite
+    - assets/ssd_mobilenet.txt
 
   # To add assets to your application, add an assets section, like this:
   # assets:

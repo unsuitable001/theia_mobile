@@ -240,6 +240,13 @@
             </list>
           </value>
         </entry>
+        <entry key="tflite">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../flutter_tflite/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="vector_math">
           <value>
             <list>
@@ -281,6 +288,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.4.16/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib" />
+      <root url="file://$PROJECT_DIR$/../flutter_tflite/lib" />
       <root url="file://$PROJECT_DIR$/../../tools/flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$PROJECT_DIR$/../../tools/flutter/packages/flutter/lib" />
       <root url="file://$PROJECT_DIR$/../../tools/flutter/packages/flutter_test/lib" />
